@@ -1,0 +1,41 @@
+create database lab02;
+/q
+\q
+\l
+\q
+select *from soft
+;
+select * from soft;
+exet
+exit
+\q
+select * from soft;
+soft exits
+select * from soft;
+soft exits;
+l-\
+-l
+l
+\q
+/l
+\l
+SELECT * FROM soft;
+SELECT * FROM soft;
+-f lab02-a.sql;
+\q
+-f lab02-a.sql;
+/q
+\q
+-f lab02-a.sql.
+;
+-f lab02-a.sql
+;
+\l
+-f lab02-a.sql;
+/q
+\q
+\c lab02
+\d
+\ psotgres
+\ postgres
+\s postgres

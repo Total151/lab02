@@ -1,0 +1,1407 @@
+2020-11-05 11:40:16.802 MSK [382] LOG:  starting PostgreSQL 12.4 on x86_64-pc-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+2020-11-05 11:40:16.803 MSK [382] LOG:  listening on IPv6 address "::1", port 5432
+2020-11-05 11:40:16.803 MSK [382] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2020-11-05 11:40:16.808 MSK [382] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2020-11-05 11:40:16.845 MSK [383] LOG:  database system was shut down at 2020-10-20 01:05:08 MSK
+2020-11-05 11:40:16.854 MSK [382] LOG:  database system is ready to accept connections
+2020-11-05 20:06:19.516 MSK [940] ERROR:  relation "soft" does not exist at character 14
+2020-11-05 20:06:19.516 MSK [940] STATEMENT:  select *from soft
+	;
+2020-11-05 20:06:29.676 MSK [940] ERROR:  relation "soft" does not exist at character 15
+2020-11-05 20:06:29.676 MSK [940] STATEMENT:  select * from soft;
+2020-11-05 20:07:01.206 MSK [943] ERROR:  relation "soft" does not exist at character 15
+2020-11-05 20:07:01.206 MSK [943] STATEMENT:  select * from soft;
+2020-11-05 20:07:16.815 MSK [943] ERROR:  syntax error at or near "soft" at character 1
+2020-11-05 20:07:16.815 MSK [943] STATEMENT:  soft exits
+	select * from soft;
+2020-11-05 20:07:23.694 MSK [943] ERROR:  syntax error at or near "soft" at character 1
+2020-11-05 20:07:23.694 MSK [943] STATEMENT:  soft exits;
+2020-11-05 20:08:59.915 MSK [947] ERROR:  syntax error at or near "/" at character 1
+2020-11-05 20:08:59.915 MSK [947] STATEMENT:  /l
+	SELECT * FROM soft;
+2020-11-05 20:09:13.373 MSK [947] ERROR:  relation "soft" does not exist at character 15
+2020-11-05 20:09:13.373 MSK [947] STATEMENT:  SELECT * FROM soft;
+2020-11-05 20:10:15.000 MSK [947] ERROR:  syntax error at or near "-" at character 1
+2020-11-05 20:10:15.000 MSK [947] STATEMENT:  -f lab02-a.sql;
+2020-11-05 20:13:35.773 MSK [957] ERROR:  relation "psc" does not exist
+2020-11-05 20:13:35.773 MSK [957] STATEMENT:  ALTER TABLE installs ADD CONSTRAINT inst FOREIGN KEY (pcs_id) REFERENCES psc (id);
+2020-11-05 20:13:35.809 MSK [957] ERROR:  constraint "peka" for relation "pcs" already exists
+2020-11-05 20:13:35.809 MSK [957] STATEMENT:  ALTER TABLE pcs ADD CONSTRAINT peka FOREIGN KEY (rooms_id) REFERENCES rooms (id);
+2020-11-05 20:13:35.824 MSK [957] ERROR:  constraint "room" for relation "rooms" already exists
+2020-11-05 20:13:35.824 MSK [957] STATEMENT:  ALTER TABLE rooms ADD CONSTRAINT room FOREIGN KEY (employees_id) REFERENCES employees (id);
+2020-11-05 20:13:58.186 MSK [960] ERROR:  syntax error at or near "," at character 17
+2020-11-05 20:13:58.186 MSK [960] STATEMENT:  DELETE FROM soft, installs, pcs, rooms, employees;
+2020-11-05 20:13:58.189 MSK [960] ERROR:  column "qant" of relation "soft" does not exist at character 32
+2020-11-05 20:13:58.189 MSK [960] STATEMENT:  INSERT INTO soft (id,sname,ver,qant) VALUES
+		(1,102568,10,13),
+		(2,499836,3,9),
+		(3,456892,9,7),
+		(4,163878,1,13),
+		(5,802837,2,7);
+2020-11-05 20:13:58.193 MSK [960] ERROR:  insert or update on table "installs" violates foreign key constraint "inst"
+2020-11-05 20:13:58.193 MSK [960] DETAIL:  Key (soft_id)=(4) is not present in table "soft".
+2020-11-05 20:13:58.193 MSK [960] STATEMENT:  INSERT INTO installs (pc_id,soft_id) VALUES
+		(1,4),
+		(1,1),
+		(2,4),
+		(2,2),
+		(3,4),
+		(3,0),
+		(4,5),
+		(4,3),
+		(5,4),
+		(5,4),
+		(6,0),
+		(6,4),
+		(7,0),
+		(7,2),
+		(8,1),
+		(8,0),
+		(9,3),
+		(9,0),
+		(10,3),
+		(10,5),
+		(11,0),
+		(11,1),
+		(12,2),
+		(12,2),
+		(13,1),
+		(13,5),
+		(14,5),
+		(14,1),
+		(15,1),
+		(15,5),
+		(16,4),
+		(16,4),
+		(17,1),
+		(18,2),
+		(18,1),
+		(19,5),
+		(19,0),
+		(20,2),
+		(20,0),
+		(21,3),
+		(21,2),
+		(22,4),
+		(22,4),
+		(23,1),
+		(23,0),
+		(24,2),
+		(24,0),
+		(25,1),
+		(25,1),
+		(26,2),
+		(26,4),
+		(27,3),
+		(27,3),
+		(28,3),
+		(28,1),
+		(29,4),
+		(29,5),
+		(30,1),
+		(30,0);
+2020-11-05 20:13:58.196 MSK [960] ERROR:  syntax error at or near ".8" at character 63
+2020-11-05 20:13:58.196 MSK [960] STATEMENT:  INSERT INTO pcs(id,room_id,ip_addr,mac_addr) VALUES
+		(1,1,5.56.8,C8:69:CD:EE:DD:01),
+		(2,1,5.56.9,C8:69:CD:EE:DD:02),
+		(3,2,5.56.10,C8:69:CD:EE:DD:03),
+		(4,2,5.56.11,C8:69:CD:EE:DD:04),
+		(5,3,5.56.12,C8:69:CD:EE:DD:05),
+		(6,3,5.56.13,C8:69:CD:EE:DD:06),
+		(7,4,5.56.14,C8:69:CD:EE:DD:07),
+		(8,4,5.56.15,C8:69:CD:EE:DD:08),
+		(9,5,5.56.16,C8:69:CD:EE:DD:09),
+		(10,5,5.56.17,C8:69:CD:EE:DD:10),
+		(11,6,5.56.18,C8:69:CD:EE:DD:11),
+		(12,6,5.56.19,C8:69:CD:EE:DD:12),
+		(13,7,5.56.20,C8:69:CD:EE:DD:13),
+		(14,7,5.56.21,C8:69:CD:EE:DD:14),
+		(15,8,5.56.22,C8:69:CD:EE:DD:15),
+		(16,8,5.56.23,C8:69:CD:EE:DD:16),
+		(17,9,5.56.24,C8:69:CD:EE:DD:17),
+		(18,9,5.56.25,C8:69:CD:EE:DD:18),
+		(19,10,5.56.26,C8:69:CD:EE:DD:19),
+		(20,10,5.56.27,C8:69:CD:EE:DD:20),
+		(21,11,5.56.28,C8:69:CD:EE:DD:21),
+		(22,11,5.56.29,C8:69:CD:EE:DD:22),
+		(23,12,5.56.30,C8:69:CD:EE:DD:23),
+		(24,12,5.56.31,C8:69:CD:EE:DD:24),
+		(25,13,5.56.32,C8:69:CD:EE:DD:25),
+		(26,13,5.56.33,C8:69:CD:EE:DD:26),
+		(27,14,5.56.34,C8:69:CD:EE:DD:27),
+		(28,14,5.56.35,C8:69:CD:EE:DD:28),
+		(29,15,5.56.36,C8:69:CD:EE:DD:29),
+	INSERT INTO rooms(id,num,emp_id) VALUES
+		(1,101,1),
+		(2,102,3),
+		(3,103,4),
+		(4,104,6),
+		(5,105,6),
+		(6,201,9),
+		(7,202,7),
+		(8,203,1),
+		(9,204,5),
+		(10,205,6),
+		(11,301,9),
+		(12,302,7),
+		(13,303,10),
+		(14,304,8),
+		(15,305,5);
+2020-11-05 20:13:58.198 MSK [960] ERROR:  column "yaroslavlev" does not exist at character 56
+2020-11-05 20:13:58.198 MSK [960] STATEMENT:  INSERT INTO employees(id,lname,fname,mname) VALUES
+		(1,yaroslavlev,nikita,sergeevich),
+		(2,smetanina,anastasia,dmitrievna),
+		(3,zakharov,ivan,vasilievich),
+		(4,kiselev,sergey,konstantinovich),
+		(5,trofimov,grigory,andreevich),
+		(6,vlasova,christina,sergeevna),
+		(7,miterin,dmitry,sergeevich),
+		(8,andropov,vasily,abramovich),
+		(9,matyushin,egor,vitalievich),
+		(10,botilova,elizoveta,andreevna);
+2020-11-05 20:23:31.941 MSK [975] ERROR:  syntax error at or near "," at character 17
+2020-11-05 20:23:31.941 MSK [975] STATEMENT:  DELETE FROM soft, installs, pcs, rooms, employees;
+2020-11-05 20:23:31.942 MSK [975] ERROR:  column "qant" of relation "soft" does not exist at character 32
+2020-11-05 20:23:31.942 MSK [975] STATEMENT:  INSERT INTO soft (id,sname,ver,qant) VALUES
+		(1,102568,10,13),
+		(2,499836,3,9),
+		(3,456892,9,7),
+		(4,163878,1,13),
+		(5,802837,2,7);
+2020-11-05 20:23:31.945 MSK [975] ERROR:  insert or update on table "installs" violates foreign key constraint "inst"
+2020-11-05 20:23:31.945 MSK [975] DETAIL:  Key (soft_id)=(4) is not present in table "soft".
+2020-11-05 20:23:31.945 MSK [975] STATEMENT:  INSERT INTO installs (pc_id,soft_id) VALUES
+		(1,4),
+		(1,1),
+		(2,4),
+		(2,2),
+		(3,4),
+		(3,0),
+		(4,5),
+		(4,3),
+		(5,4),
+		(5,4),
+		(6,0),
+		(6,4),
+		(7,0),
+		(7,2),
+		(8,1),
+		(8,0),
+		(9,3),
+		(9,0),
+		(10,3),
+		(10,5),
+		(11,0),
+		(11,1),
+		(12,2),
+		(12,2),
+		(13,1),
+		(13,5),
+		(14,5),
+		(14,1),
+		(15,1),
+		(15,5),
+		(16,4),
+		(16,4),
+		(17,1),
+		(18,2),
+		(18,1),
+		(19,5),
+		(19,0),
+		(20,2),
+		(20,0),
+		(21,3),
+		(21,2),
+		(22,4),
+		(22,4),
+		(23,1),
+		(23,0),
+		(24,2),
+		(24,0),
+		(25,1),
+		(25,1),
+		(26,2),
+		(26,4),
+		(27,3),
+		(27,3),
+		(28,3),
+		(28,1),
+		(29,4),
+		(29,5),
+		(30,1),
+		(30,0);
+2020-11-05 20:23:31.947 MSK [975] ERROR:  syntax error at or near ".8" at character 63
+2020-11-05 20:23:31.947 MSK [975] STATEMENT:  INSERT INTO pcs(id,room_id,ip_addr,mac_addr) VALUES
+		(1,1,5.56.8,C8:69:CD:EE:DD:01),
+		(2,1,5.56.9,C8:69:CD:EE:DD:02),
+		(3,2,5.56.10,C8:69:CD:EE:DD:03),
+		(4,2,5.56.11,C8:69:CD:EE:DD:04),
+		(5,3,5.56.12,C8:69:CD:EE:DD:05),
+		(6,3,5.56.13,C8:69:CD:EE:DD:06),
+		(7,4,5.56.14,C8:69:CD:EE:DD:07),
+		(8,4,5.56.15,C8:69:CD:EE:DD:08),
+		(9,5,5.56.16,C8:69:CD:EE:DD:09),
+		(10,5,5.56.17,C8:69:CD:EE:DD:10),
+		(11,6,5.56.18,C8:69:CD:EE:DD:11),
+		(12,6,5.56.19,C8:69:CD:EE:DD:12),
+		(13,7,5.56.20,C8:69:CD:EE:DD:13),
+		(14,7,5.56.21,C8:69:CD:EE:DD:14),
+		(15,8,5.56.22,C8:69:CD:EE:DD:15),
+		(16,8,5.56.23,C8:69:CD:EE:DD:16),
+		(17,9,5.56.24,C8:69:CD:EE:DD:17),
+		(18,9,5.56.25,C8:69:CD:EE:DD:18),
+		(19,10,5.56.26,C8:69:CD:EE:DD:19),
+		(20,10,5.56.27,C8:69:CD:EE:DD:20),
+		(21,11,5.56.28,C8:69:CD:EE:DD:21),
+		(22,11,5.56.29,C8:69:CD:EE:DD:22),
+		(23,12,5.56.30,C8:69:CD:EE:DD:23),
+		(24,12,5.56.31,C8:69:CD:EE:DD:24),
+		(25,13,5.56.32,C8:69:CD:EE:DD:25),
+		(26,13,5.56.33,C8:69:CD:EE:DD:26),
+		(27,14,5.56.34,C8:69:CD:EE:DD:27),
+		(28,14,5.56.35,C8:69:CD:EE:DD:28),
+		(29,15,5.56.36,C8:69:CD:EE:DD:29),
+	INSERT INTO rooms(id,num,emp_id) VALUES
+		(1,101,1),
+		(2,102,3),
+		(3,103,4),
+		(4,104,6),
+		(5,105,6),
+		(6,201,9),
+		(7,202,7),
+		(8,203,1),
+		(9,204,5),
+		(10,205,6),
+		(11,301,9),
+		(12,302,7),
+		(13,303,10),
+		(14,304,8),
+		(15,305,5);
+2020-11-05 20:23:31.949 MSK [975] ERROR:  column "yaroslavlev" does not exist at character 56
+2020-11-05 20:23:31.949 MSK [975] STATEMENT:  INSERT INTO employees(id,lname,fname,mname) VALUES
+		(1,yaroslavlev,nikita,sergeevich),
+		(2,smetanina,anastasia,dmitrievna),
+		(3,zakharov,ivan,vasilievich),
+		(4,kiselev,sergey,konstantinovich),
+		(5,trofimov,grigory,andreevich),
+		(6,vlasova,christina,sergeevna),
+		(7,miterin,dmitry,sergeevich),
+		(8,andropov,vasily,abramovich),
+		(9,matyushin,egor,vitalievich),
+		(10,botilova,elizoveta,andreevna);
+2020-11-06 09:16:56.055 MSK [1962] ERROR:  multiple primary keys for table "soft" are not allowed
+2020-11-06 09:16:56.055 MSK [1962] STATEMENT:  ALTER TABLE soft ADD CONSTRAINT softina PRIMARY KEY (id);
+2020-11-06 09:16:56.057 MSK [1962] ERROR:  constraint "inst" for relation "installs" already exists
+2020-11-06 09:16:56.057 MSK [1962] STATEMENT:  ALTER TABLE installs ADD CONSTRAINT inst FOREIGN KEY (pcs_id) REFERENCES psc (id);
+2020-11-06 09:16:56.057 MSK [1962] ERROR:  constraint "inst" for relation "installs" already exists
+2020-11-06 09:16:56.057 MSK [1962] STATEMENT:  ALTER TABLE installs ADD CONSTRAINT inst FOREIGN KEY (soft_id) REFERENCES soft (id);
+2020-11-06 09:16:56.057 MSK [1962] ERROR:  multiple primary keys for table "pcs" are not allowed
+2020-11-06 09:16:56.057 MSK [1962] STATEMENT:  ALTER TABLE pcs ADD CONSTRAINT peka PRIMARY KEY (id);
+2020-11-06 09:16:56.058 MSK [1962] ERROR:  constraint "peka" for relation "pcs" already exists
+2020-11-06 09:16:56.058 MSK [1962] STATEMENT:  ALTER TABLE pcs ADD CONSTRAINT peka FOREIGN KEY (rooms_id) REFERENCES rooms (id);
+2020-11-06 09:16:56.058 MSK [1962] ERROR:  multiple primary keys for table "rooms" are not allowed
+2020-11-06 09:16:56.058 MSK [1962] STATEMENT:  ALTER TABLE rooms ADD CONSTRAINT room PRIMARY KEY (id);
+2020-11-06 09:16:56.058 MSK [1962] ERROR:  constraint "room" for relation "rooms" already exists
+2020-11-06 09:16:56.058 MSK [1962] STATEMENT:  ALTER TABLE rooms ADD CONSTRAINT room FOREIGN KEY (employees_id) REFERENCES employees (id);
+2020-11-06 09:16:56.059 MSK [1962] ERROR:  multiple primary keys for table "employees" are not allowed
+2020-11-06 09:16:56.059 MSK [1962] STATEMENT:  ALTER TABLE employees ADD CONSTRAINT employ PRIMARY KEY (id);
+2020-11-06 09:17:10.174 MSK [1969] ERROR:  relation "psc" does not exist
+2020-11-06 09:17:10.174 MSK [1969] STATEMENT:  ALTER TABLE installs ADD CONSTRAINT inst FOREIGN KEY (pcs_id) REFERENCES psc (id);
+2020-11-06 09:17:10.183 MSK [1969] ERROR:  constraint "peka" for relation "pcs" already exists
+2020-11-06 09:17:10.183 MSK [1969] STATEMENT:  ALTER TABLE pcs ADD CONSTRAINT peka FOREIGN KEY (rooms_id) REFERENCES rooms (id);
+2020-11-06 09:17:10.188 MSK [1969] ERROR:  constraint "room" for relation "rooms" already exists
+2020-11-06 09:17:10.188 MSK [1969] STATEMENT:  ALTER TABLE rooms ADD CONSTRAINT room FOREIGN KEY (employees_id) REFERENCES employees (id);
+2020-11-06 09:24:19.718 MSK [1982] ERROR:  relation "psc" does not exist
+2020-11-06 09:24:19.718 MSK [1982] STATEMENT:  ALTER TABLE installs ADD CONSTRAINT inst FOREIGN KEY (pcs_id) REFERENCES psc (id);
+2020-11-06 09:24:19.721 MSK [1982] ERROR:  constraint "peka" for relation "pcs" already exists
+2020-11-06 09:24:19.721 MSK [1982] STATEMENT:  ALTER TABLE pcs ADD CONSTRAINT peka FOREIGN KEY (rooms_id) REFERENCES rooms (id);
+2020-11-06 09:24:19.722 MSK [1982] ERROR:  constraint "room" for relation "rooms" already exists
+2020-11-06 09:24:19.722 MSK [1982] STATEMENT:  ALTER TABLE rooms ADD CONSTRAINT room FOREIGN KEY (employees_id) REFERENCES employees (id);
+2020-11-06 09:27:05.472 MSK [1989] ERROR:  relation "psc" does not exist
+2020-11-06 09:27:05.472 MSK [1989] STATEMENT:  ALTER TABLE installs ADD CONSTRAINT inst FOREIGN KEY (pcs_id) REFERENCES psc (id);
+2020-11-06 09:27:05.475 MSK [1989] ERROR:  constraint "peka" for relation "pcs" already exists
+2020-11-06 09:27:05.475 MSK [1989] STATEMENT:  ALTER TABLE pcs ADD CONSTRAINT peka FOREIGN KEY (rooms_id) REFERENCES rooms (id);
+2020-11-06 09:27:05.476 MSK [1989] ERROR:  constraint "room" for relation "rooms" already exists
+2020-11-06 09:27:05.476 MSK [1989] STATEMENT:  ALTER TABLE rooms ADD CONSTRAINT room FOREIGN KEY (employees_id) REFERENCES employees (id);
+2020-11-06 10:06:14.559 MSK [2032] ERROR:  multiple primary keys for table "soft" are not allowed
+2020-11-06 10:06:14.559 MSK [2032] STATEMENT:  ALTER TABLE soft ADD CONSTRAINT softina PRIMARY KEY (id);
+2020-11-06 10:06:14.561 MSK [2032] ERROR:  multiple primary keys for table "pcs" are not allowed
+2020-11-06 10:06:14.561 MSK [2032] STATEMENT:  ALTER TABLE pcs ADD CONSTRAINT peka PRIMARY KEY (id);
+2020-11-06 10:06:14.562 MSK [2032] ERROR:  multiple primary keys for table "rooms" are not allowed
+2020-11-06 10:06:14.562 MSK [2032] STATEMENT:  ALTER TABLE rooms ADD CONSTRAINT room PRIMARY KEY (id);
+2020-11-06 10:06:14.563 MSK [2032] ERROR:  multiple primary keys for table "employees" are not allowed
+2020-11-06 10:06:14.563 MSK [2032] STATEMENT:  ALTER TABLE employees ADD CONSTRAINT employ PRIMARY KEY (id);
+2020-11-06 10:06:14.564 MSK [2032] ERROR:  constraint "inst" for relation "installs" already exists
+2020-11-06 10:06:14.564 MSK [2032] STATEMENT:  ALTER TABLE installs ADD CONSTRAINT inst FOREIGN KEY (pcs_id) REFERENCES psc (id);
+2020-11-06 10:06:14.564 MSK [2032] ERROR:  constraint "inst" for relation "installs" already exists
+2020-11-06 10:06:14.564 MSK [2032] STATEMENT:  ALTER TABLE installs ADD CONSTRAINT inst FOREIGN KEY (soft_id) REFERENCES soft (id);
+2020-11-06 10:06:14.565 MSK [2032] ERROR:  constraint "peka" for relation "pcs" already exists
+2020-11-06 10:06:14.565 MSK [2032] STATEMENT:  ALTER TABLE pcs ADD CONSTRAINT peka FOREIGN KEY (rooms_id) REFERENCES rooms (id);
+2020-11-06 10:06:14.565 MSK [2032] ERROR:  constraint "room" for relation "rooms" already exists
+2020-11-06 10:06:14.565 MSK [2032] STATEMENT:  ALTER TABLE rooms ADD CONSTRAINT room FOREIGN KEY (employees_id) REFERENCES employees (id);
+2020-11-06 10:06:29.691 MSK [2036] ERROR:  relation "psc" does not exist
+2020-11-06 10:06:29.691 MSK [2036] STATEMENT:  ALTER TABLE installs ADD CONSTRAINT inst FOREIGN KEY (pcs_id) REFERENCES psc (id);
+2020-11-06 10:06:29.694 MSK [2036] ERROR:  constraint "peka" for relation "pcs" already exists
+2020-11-06 10:06:29.694 MSK [2036] STATEMENT:  ALTER TABLE pcs ADD CONSTRAINT peka FOREIGN KEY (rooms_id) REFERENCES rooms (id);
+2020-11-06 10:06:29.694 MSK [2036] ERROR:  constraint "room" for relation "rooms" already exists
+2020-11-06 10:06:29.694 MSK [2036] STATEMENT:  ALTER TABLE rooms ADD CONSTRAINT room FOREIGN KEY (employees_id) REFERENCES employees (id);
+2020-11-06 10:08:05.520 MSK [2042] ERROR:  relation "psc" does not exist
+2020-11-06 10:08:05.520 MSK [2042] STATEMENT:  ALTER TABLE installs ADD CONSTRAINT inst FOREIGN KEY (pcs_id) REFERENCES psc (id);
+2020-11-06 10:08:05.524 MSK [2042] ERROR:  column "rooms_id" referenced in foreign key constraint does not exist
+2020-11-06 10:08:05.524 MSK [2042] STATEMENT:  ALTER TABLE pcs ADD CONSTRAINT peka2 FOREIGN KEY (rooms_id) REFERENCES rooms (id);
+2020-11-06 10:08:05.525 MSK [2042] ERROR:  column "employees_id" referenced in foreign key constraint does not exist
+2020-11-06 10:08:05.525 MSK [2042] STATEMENT:  ALTER TABLE rooms ADD CONSTRAINT room2 FOREIGN KEY (employees_id) REFERENCES employees (id);
+2020-11-06 10:14:57.005 MSK [2056] ERROR:  relation "psc" does not exist
+2020-11-06 10:14:57.005 MSK [2056] STATEMENT:  ALTER TABLE installs ADD CONSTRAINT inst FOREIGN KEY (pc_id) REFERENCES psc (id);
+2020-11-06 10:14:57.014 MSK [2056] ERROR:  column "employees_id" referenced in foreign key constraint does not exist
+2020-11-06 10:14:57.014 MSK [2056] STATEMENT:  ALTER TABLE rooms ADD CONSTRAINT room2 FOREIGN KEY (employees_id) REFERENCES employees (id);
+2020-11-06 10:15:31.261 MSK [2062] ERROR:  relation "psc" does not exist
+2020-11-06 10:15:31.261 MSK [2062] STATEMENT:  ALTER TABLE installs ADD CONSTRAINT inst FOREIGN KEY (pc_id) REFERENCES psc (id);
+2020-11-06 10:18:21.300 MSK [2075] ERROR:  syntax error at or near "," at character 17
+2020-11-06 10:18:21.300 MSK [2075] STATEMENT:  DELETE FROM soft, installs, pcs, rooms, employees;
+2020-11-06 10:18:21.303 MSK [2075] ERROR:  column "qant" of relation "soft" does not exist at character 32
+2020-11-06 10:18:21.303 MSK [2075] STATEMENT:  INSERT INTO soft (id,sname,ver,qant) VALUES
+		(1,102568,10,13),
+		(2,499836,3,9),
+		(3,456892,9,7),
+		(4,163878,1,13),
+		(5,802837,2,7);
+2020-11-06 10:18:21.306 MSK [2075] ERROR:  insert or update on table "installs" violates foreign key constraint "inst"
+2020-11-06 10:18:21.306 MSK [2075] DETAIL:  Key (pc_id)=(1) is not present in table "pcs".
+2020-11-06 10:18:21.306 MSK [2075] STATEMENT:  INSERT INTO installs (pc_id,soft_id) VALUES
+		(1,4),
+		(1,1),
+		(2,4),
+		(2,2),
+		(3,4),
+		(3,0),
+		(4,5),
+		(4,3),
+		(5,4),
+		(5,4),
+		(6,0),
+		(6,4),
+		(7,0),
+		(7,2),
+		(8,1),
+		(8,0),
+		(9,3),
+		(9,0),
+		(10,3),
+		(10,5),
+		(11,0),
+		(11,1),
+		(12,2),
+		(12,2),
+		(13,1),
+		(13,5),
+		(14,5),
+		(14,1),
+		(15,1),
+		(15,5),
+		(16,4),
+		(16,4),
+		(17,1),
+		(18,2),
+		(18,1),
+		(19,5),
+		(19,0),
+		(20,2),
+		(20,0),
+		(21,3),
+		(21,2),
+		(22,4),
+		(22,4),
+		(23,1),
+		(23,0),
+		(24,2),
+		(24,0),
+		(25,1),
+		(25,1),
+		(26,2),
+		(26,4),
+		(27,3),
+		(27,3),
+		(28,3),
+		(28,1),
+		(29,4),
+		(29,5),
+		(30,1),
+		(30,0);
+2020-11-06 10:18:21.308 MSK [2075] ERROR:  syntax error at or near ".8" at character 63
+2020-11-06 10:18:21.308 MSK [2075] STATEMENT:  INSERT INTO pcs(id,room_id,ip_addr,mac_addr) VALUES
+		(1,1,5.56.8,C8:69:CD:EE:DD:01),
+		(2,1,5.56.9,C8:69:CD:EE:DD:02),
+		(3,2,5.56.10,C8:69:CD:EE:DD:03),
+		(4,2,5.56.11,C8:69:CD:EE:DD:04),
+		(5,3,5.56.12,C8:69:CD:EE:DD:05),
+		(6,3,5.56.13,C8:69:CD:EE:DD:06),
+		(7,4,5.56.14,C8:69:CD:EE:DD:07),
+		(8,4,5.56.15,C8:69:CD:EE:DD:08),
+		(9,5,5.56.16,C8:69:CD:EE:DD:09),
+		(10,5,5.56.17,C8:69:CD:EE:DD:10),
+		(11,6,5.56.18,C8:69:CD:EE:DD:11),
+		(12,6,5.56.19,C8:69:CD:EE:DD:12),
+		(13,7,5.56.20,C8:69:CD:EE:DD:13),
+		(14,7,5.56.21,C8:69:CD:EE:DD:14),
+		(15,8,5.56.22,C8:69:CD:EE:DD:15),
+		(16,8,5.56.23,C8:69:CD:EE:DD:16),
+		(17,9,5.56.24,C8:69:CD:EE:DD:17),
+		(18,9,5.56.25,C8:69:CD:EE:DD:18),
+		(19,10,5.56.26,C8:69:CD:EE:DD:19),
+		(20,10,5.56.27,C8:69:CD:EE:DD:20),
+		(21,11,5.56.28,C8:69:CD:EE:DD:21),
+		(22,11,5.56.29,C8:69:CD:EE:DD:22),
+		(23,12,5.56.30,C8:69:CD:EE:DD:23),
+		(24,12,5.56.31,C8:69:CD:EE:DD:24),
+		(25,13,5.56.32,C8:69:CD:EE:DD:25),
+		(26,13,5.56.33,C8:69:CD:EE:DD:26),
+		(27,14,5.56.34,C8:69:CD:EE:DD:27),
+		(28,14,5.56.35,C8:69:CD:EE:DD:28),
+		(29,15,5.56.36,C8:69:CD:EE:DD:29),
+	INSERT INTO rooms(id,num,emp_id) VALUES
+		(1,101,1),
+		(2,102,3),
+		(3,103,4),
+		(4,104,6),
+		(5,105,6),
+		(6,201,9),
+		(7,202,7),
+		(8,203,1),
+		(9,204,5),
+		(10,205,6),
+		(11,301,9),
+		(12,302,7),
+		(13,303,10),
+		(14,304,8),
+		(15,305,5);
+2020-11-06 10:18:21.309 MSK [2075] ERROR:  column "yaroslavlev" does not exist at character 56
+2020-11-06 10:18:21.309 MSK [2075] STATEMENT:  INSERT INTO employees(id,lname,fname,mname) VALUES
+		(1,yaroslavlev,nikita,sergeevich),
+		(2,smetanina,anastasia,dmitrievna),
+		(3,zakharov,ivan,vasilievich),
+		(4,kiselev,sergey,konstantinovich),
+		(5,trofimov,grigory,andreevich),
+		(6,vlasova,christina,sergeevna),
+		(7,miterin,dmitry,sergeevich),
+		(8,andropov,vasily,abramovich),
+		(9,matyushin,egor,vitalievich),
+		(10,botilova,elizoveta,andreevna);
+2020-11-06 10:28:56.563 MSK [2090] ERROR:  insert or update on table "installs" violates foreign key constraint "inst"
+2020-11-06 10:28:56.563 MSK [2090] DETAIL:  Key (pc_id)=(1) is not present in table "pcs".
+2020-11-06 10:28:56.563 MSK [2090] STATEMENT:  INSERT INTO installs (pc_id,soft_id) VALUES
+		(1,4),
+		(1,1),
+		(2,4),
+		(2,2),
+		(3,4),
+		(3,0),
+		(4,5),
+		(4,3),
+		(5,4),
+		(5,4),
+		(6,0),
+		(6,4),
+		(7,0),
+		(7,2),
+		(8,1),
+		(8,0),
+		(9,3),
+		(9,0),
+		(10,3),
+		(10,5),
+		(11,0),
+		(11,1),
+		(12,2),
+		(12,2),
+		(13,1),
+		(13,5),
+		(14,5),
+		(14,1),
+		(15,1),
+		(15,5),
+		(16,4),
+		(16,4),
+		(17,1),
+		(18,2),
+		(18,1),
+		(19,5),
+		(19,0),
+		(20,2),
+		(20,0),
+		(21,3),
+		(21,2),
+		(22,4),
+		(22,4),
+		(23,1),
+		(23,0),
+		(24,2),
+		(24,0),
+		(25,1),
+		(25,1),
+		(26,2),
+		(26,4),
+		(27,3),
+		(27,3),
+		(28,3),
+		(28,1),
+		(29,4),
+		(29,5),
+		(30,1),
+		(30,0);
+2020-11-06 10:28:56.565 MSK [2090] ERROR:  syntax error at or near ".8" at character 63
+2020-11-06 10:28:56.565 MSK [2090] STATEMENT:  INSERT INTO pcs(id,room_id,ip_addr,mac_addr) VALUES
+		(1,1,5.56.8,C8:69:CD:EE:DD:01),
+		(2,1,5.56.9,C8:69:CD:EE:DD:02),
+		(3,2,5.56.10,C8:69:CD:EE:DD:03),
+		(4,2,5.56.11,C8:69:CD:EE:DD:04),
+		(5,3,5.56.12,C8:69:CD:EE:DD:05),
+		(6,3,5.56.13,C8:69:CD:EE:DD:06),
+		(7,4,5.56.14,C8:69:CD:EE:DD:07),
+		(8,4,5.56.15,C8:69:CD:EE:DD:08),
+		(9,5,5.56.16,C8:69:CD:EE:DD:09),
+		(10,5,5.56.17,C8:69:CD:EE:DD:10),
+		(11,6,5.56.18,C8:69:CD:EE:DD:11),
+		(12,6,5.56.19,C8:69:CD:EE:DD:12),
+		(13,7,5.56.20,C8:69:CD:EE:DD:13),
+		(14,7,5.56.21,C8:69:CD:EE:DD:14),
+		(15,8,5.56.22,C8:69:CD:EE:DD:15),
+		(16,8,5.56.23,C8:69:CD:EE:DD:16),
+		(17,9,5.56.24,C8:69:CD:EE:DD:17),
+		(18,9,5.56.25,C8:69:CD:EE:DD:18),
+		(19,10,5.56.26,C8:69:CD:EE:DD:19),
+		(20,10,5.56.27,C8:69:CD:EE:DD:20),
+		(21,11,5.56.28,C8:69:CD:EE:DD:21),
+		(22,11,5.56.29,C8:69:CD:EE:DD:22),
+		(23,12,5.56.30,C8:69:CD:EE:DD:23),
+		(24,12,5.56.31,C8:69:CD:EE:DD:24),
+		(25,13,5.56.32,C8:69:CD:EE:DD:25),
+		(26,13,5.56.33,C8:69:CD:EE:DD:26),
+		(27,14,5.56.34,C8:69:CD:EE:DD:27),
+		(28,14,5.56.35,C8:69:CD:EE:DD:28),
+		(29,15,5.56.36,C8:69:CD:EE:DD:29);
+2020-11-06 10:28:56.567 MSK [2090] ERROR:  insert or update on table "rooms" violates foreign key constraint "room2"
+2020-11-06 10:28:56.567 MSK [2090] DETAIL:  Key (emp_id)=(1) is not present in table "employees".
+2020-11-06 10:28:56.567 MSK [2090] STATEMENT:  INSERT INTO rooms(id,num,emp_id) VALUES
+		(1,101,1),
+		(2,102,3),
+		(3,103,4),
+		(4,104,6),
+		(5,105,6),
+		(6,201,9),
+		(7,202,7),
+		(8,203,1),
+		(9,204,5),
+		(10,205,6),
+		(11,301,9),
+		(12,302,7),
+		(13,303,10),
+		(14,304,8),
+		(15,305,5);
+2020-11-06 10:28:56.569 MSK [2090] ERROR:  column "yaroslavlev" does not exist at character 56
+2020-11-06 10:28:56.569 MSK [2090] STATEMENT:  INSERT INTO employees(id,lname,fname,mname) VALUES
+		(1,yaroslavlev,nikita,sergeevich),
+		(2,smetanina,anastasia,dmitrievna),
+		(3,zakharov,ivan,vasilievich),
+		(4,kiselev,sergey,konstantinovich),
+		(5,trofimov,grigory,andreevich),
+		(6,vlasova,christina,sergeevna),
+		(7,miterin,dmitry,sergeevich),
+		(8,andropov,vasily,abramovich),
+		(9,matyushin,egor,vitalievich),
+		(10,botilova,elizoveta,andreevna);
+2020-11-06 10:34:06.435 MSK [2102] ERROR:  insert or update on table "installs" violates foreign key constraint "inst"
+2020-11-06 10:34:06.435 MSK [2102] DETAIL:  Key (pc_id)=(1) is not present in table "pcs".
+2020-11-06 10:34:06.435 MSK [2102] STATEMENT:  INSERT INTO installs (pc_id,soft_id) VALUES
+		(1,4),
+		(1,1),
+		(2,4),
+		(2,2),
+		(3,4),
+		(3,0),
+		(4,5),
+		(4,3),
+		(5,4),
+		(5,4),
+		(6,0),
+		(6,4),
+		(7,0),
+		(7,2),
+		(8,1),
+		(8,0),
+		(9,3),
+		(9,0),
+		(10,3),
+		(10,5),
+		(11,0),
+		(11,1),
+		(12,2),
+		(12,2),
+		(13,1),
+		(13,5),
+		(14,5),
+		(14,1),
+		(15,1),
+		(15,5),
+		(16,4),
+		(16,4),
+		(17,1),
+		(18,2),
+		(18,1),
+		(19,5),
+		(19,0),
+		(20,2),
+		(20,0),
+		(21,3),
+		(21,2),
+		(22,4),
+		(22,4),
+		(23,1),
+		(23,0),
+		(24,2),
+		(24,0),
+		(25,1),
+		(25,1),
+		(26,2),
+		(26,4),
+		(27,3),
+		(27,3),
+		(28,3),
+		(28,1),
+		(29,4),
+		(29,5),
+		(30,1),
+		(30,0);
+2020-11-06 10:34:06.435 MSK [2102] ERROR:  syntax error at or near ".8" at character 63
+2020-11-06 10:34:06.435 MSK [2102] STATEMENT:  INSERT INTO pcs(id,room_id,ip_addr,mac_addr) VALUES
+		(1,1,5.56.8,C8:69:CD:EE:DD:01),
+		(2,1,5.56.9,C8:69:CD:EE:DD:02),
+		(3,2,5.56.10,C8:69:CD:EE:DD:03),
+		(4,2,5.56.11,C8:69:CD:EE:DD:04),
+		(5,3,5.56.12,C8:69:CD:EE:DD:05),
+		(6,3,5.56.13,C8:69:CD:EE:DD:06),
+		(7,4,5.56.14,C8:69:CD:EE:DD:07),
+		(8,4,5.56.15,C8:69:CD:EE:DD:08),
+		(9,5,5.56.16,C8:69:CD:EE:DD:09),
+		(10,5,5.56.17,C8:69:CD:EE:DD:10),
+		(11,6,5.56.18,C8:69:CD:EE:DD:11),
+		(12,6,5.56.19,C8:69:CD:EE:DD:12),
+		(13,7,5.56.20,C8:69:CD:EE:DD:13),
+		(14,7,5.56.21,C8:69:CD:EE:DD:14),
+		(15,8,5.56.22,C8:69:CD:EE:DD:15),
+		(16,8,5.56.23,C8:69:CD:EE:DD:16),
+		(17,9,5.56.24,C8:69:CD:EE:DD:17),
+		(18,9,5.56.25,C8:69:CD:EE:DD:18),
+		(19,10,5.56.26,C8:69:CD:EE:DD:19),
+		(20,10,5.56.27,C8:69:CD:EE:DD:20),
+		(21,11,5.56.28,C8:69:CD:EE:DD:21),
+		(22,11,5.56.29,C8:69:CD:EE:DD:22),
+		(23,12,5.56.30,C8:69:CD:EE:DD:23),
+		(24,12,5.56.31,C8:69:CD:EE:DD:24),
+		(25,13,5.56.32,C8:69:CD:EE:DD:25),
+		(26,13,5.56.33,C8:69:CD:EE:DD:26),
+		(27,14,5.56.34,C8:69:CD:EE:DD:27),
+		(28,14,5.56.35,C8:69:CD:EE:DD:28),
+		(29,15,5.56.36,C8:69:CD:EE:DD:29);
+2020-11-06 10:34:06.436 MSK [2102] ERROR:  insert or update on table "rooms" violates foreign key constraint "room2"
+2020-11-06 10:34:06.436 MSK [2102] DETAIL:  Key (emp_id)=(1) is not present in table "employees".
+2020-11-06 10:34:06.436 MSK [2102] STATEMENT:  INSERT INTO rooms(id,num,emp_id) VALUES
+		(1,101,1),
+		(2,102,3),
+		(3,103,4),
+		(4,104,6),
+		(5,105,6),
+		(6,201,9),
+		(7,202,7),
+		(8,203,1),
+		(9,204,5),
+		(10,205,6),
+		(11,301,9),
+		(12,302,7),
+		(13,303,10),
+		(14,304,8),
+		(15,305,5);
+2020-11-06 10:34:06.437 MSK [2102] ERROR:  column "yaroslavlev" does not exist at character 56
+2020-11-06 10:34:06.437 MSK [2102] STATEMENT:  INSERT INTO employees(id,lname,fname,mname) VALUES
+		(1,yaroslavlev,nikita,sergeevich),
+		(2,smetanina,anastasia,dmitrievna),
+		(3,zakharov,ivan,vasilievich),
+		(4,kiselev,sergey,konstantinovich),
+		(5,trofimov,grigory,andreevich),
+		(6,vlasova,christina,sergeevna),
+		(7,miterin,dmitry,sergeevich),
+		(8,andropov,vasily,abramovich),
+		(9,matyushin,egor,vitalievich),
+		(10,botilova,elizoveta,andreevna);
+2020-11-10 13:27:27.975 MSK [641] LOG:  starting PostgreSQL 12.4 on x86_64-pc-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+2020-11-10 13:27:27.977 MSK [641] LOG:  listening on IPv6 address "::1", port 5432
+2020-11-10 13:27:27.977 MSK [641] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2020-11-10 13:27:27.982 MSK [641] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2020-11-10 13:27:28.010 MSK [642] LOG:  database system was interrupted; last known up at 2020-11-06 10:36:41 MSK
+2020-11-10 13:27:28.189 MSK [642] LOG:  database system was not properly shut down; automatic recovery in progress
+2020-11-10 13:27:28.193 MSK [642] LOG:  redo starts at 0/182D6D8
+2020-11-10 13:27:28.193 MSK [642] LOG:  invalid record length at 0/182D7C0: wanted 24, got 0
+2020-11-10 13:27:28.193 MSK [642] LOG:  redo done at 0/182D788
+2020-11-10 13:27:28.210 MSK [641] LOG:  database system is ready to accept connections
+2020-11-10 13:31:51.274 MSK [650] ERROR:  syntax error at or near "-" at character 1
+2020-11-10 13:31:51.274 MSK [650] STATEMENT:  -f lab02-a.sql;
+2020-11-10 13:33:05.503 MSK [654] ERROR:  syntax error at or near "-" at character 1
+2020-11-10 13:33:05.503 MSK [654] STATEMENT:  -f lab02-a.sql.
+	;
+2020-11-10 13:34:23.101 MSK [654] ERROR:  syntax error at or near "-" at character 1
+2020-11-10 13:34:23.101 MSK [654] STATEMENT:  -f lab02-a.sql
+	;
+2020-11-10 13:34:58.964 MSK [654] ERROR:  syntax error at or near "-" at character 1
+2020-11-10 13:34:58.964 MSK [654] STATEMENT:  -f lab02-a.sql;
+2020-11-10 13:36:51.057 MSK [667] ERROR:  insert or update on table "installs" violates foreign key constraint "inst"
+2020-11-10 13:36:51.057 MSK [667] DETAIL:  Key (pc_id)=(1) is not present in table "pcs".
+2020-11-10 13:36:51.057 MSK [667] STATEMENT:  INSERT INTO installs (pc_id,soft_id) VALUES
+		(1,4),
+		(1,1),
+		(2,4),
+		(2,2),
+		(3,4),
+		(3,0),
+		(4,5),
+		(4,3),
+		(5,4),
+		(5,4),
+		(6,0),
+		(6,4),
+		(7,0),
+		(7,2),
+		(8,1),
+		(8,0),
+		(9,3),
+		(9,0),
+		(10,3),
+		(10,5),
+		(11,0),
+		(11,1),
+		(12,2),
+		(12,2),
+		(13,1),
+		(13,5),
+		(14,5),
+		(14,1),
+		(15,1),
+		(15,5),
+		(16,4),
+		(16,4),
+		(17,1),
+		(18,2),
+		(18,1),
+		(19,5),
+		(19,0),
+		(20,2),
+		(20,0),
+		(21,3),
+		(21,2),
+		(22,4),
+		(22,4),
+		(23,1),
+		(23,0),
+		(24,2),
+		(24,0),
+		(25,1),
+		(25,1),
+		(26,2),
+		(26,4),
+		(27,3),
+		(27,3),
+		(28,3),
+		(28,1),
+		(29,4),
+		(29,5),
+		(30,1),
+		(30,0);
+2020-11-10 13:36:51.058 MSK [667] ERROR:  syntax error at or near ".8" at character 63
+2020-11-10 13:36:51.058 MSK [667] STATEMENT:  INSERT INTO pcs(id,room_id,ip_addr,mac_addr) VALUES
+		(1,1,5.56.8,C8:69:CD:EE:DD:01),
+		(2,1,5.56.9,C8:69:CD:EE:DD:02),
+		(3,2,5.56.10,C8:69:CD:EE:DD:03),
+		(4,2,5.56.11,C8:69:CD:EE:DD:04),
+		(5,3,5.56.12,C8:69:CD:EE:DD:05),
+		(6,3,5.56.13,C8:69:CD:EE:DD:06),
+		(7,4,5.56.14,C8:69:CD:EE:DD:07),
+		(8,4,5.56.15,C8:69:CD:EE:DD:08),
+		(9,5,5.56.16,C8:69:CD:EE:DD:09),
+		(10,5,5.56.17,C8:69:CD:EE:DD:10),
+		(11,6,5.56.18,C8:69:CD:EE:DD:11),
+		(12,6,5.56.19,C8:69:CD:EE:DD:12),
+		(13,7,5.56.20,C8:69:CD:EE:DD:13),
+		(14,7,5.56.21,C8:69:CD:EE:DD:14),
+		(15,8,5.56.22,C8:69:CD:EE:DD:15),
+		(16,8,5.56.23,C8:69:CD:EE:DD:16),
+		(17,9,5.56.24,C8:69:CD:EE:DD:17),
+		(18,9,5.56.25,C8:69:CD:EE:DD:18),
+		(19,10,5.56.26,C8:69:CD:EE:DD:19),
+		(20,10,5.56.27,C8:69:CD:EE:DD:20),
+		(21,11,5.56.28,C8:69:CD:EE:DD:21),
+		(22,11,5.56.29,C8:69:CD:EE:DD:22),
+		(23,12,5.56.30,C8:69:CD:EE:DD:23),
+		(24,12,5.56.31,C8:69:CD:EE:DD:24),
+		(25,13,5.56.32,C8:69:CD:EE:DD:25),
+		(26,13,5.56.33,C8:69:CD:EE:DD:26),
+		(27,14,5.56.34,C8:69:CD:EE:DD:27),
+		(28,14,5.56.35,C8:69:CD:EE:DD:28),
+		(29,15,5.56.36,C8:69:CD:EE:DD:29);
+2020-11-10 13:36:51.060 MSK [667] ERROR:  insert or update on table "rooms" violates foreign key constraint "room2"
+2020-11-10 13:36:51.060 MSK [667] DETAIL:  Key (emp_id)=(1) is not present in table "employees".
+2020-11-10 13:36:51.060 MSK [667] STATEMENT:  INSERT INTO rooms(id,num,emp_id) VALUES
+		(1,101,1),
+		(2,102,3),
+		(3,103,4),
+		(4,104,6),
+		(5,105,6),
+		(6,201,9),
+		(7,202,7),
+		(8,203,1),
+		(9,204,5),
+		(10,205,6),
+		(11,301,9),
+		(12,302,7),
+		(13,303,10),
+		(14,304,8),
+		(15,305,5);
+2020-11-10 13:36:51.061 MSK [667] ERROR:  column "yaroslavlev" does not exist at character 56
+2020-11-10 13:36:51.061 MSK [667] STATEMENT:  INSERT INTO employees(id,lname,fname,mname) VALUES
+		(1,yaroslavlev,nikita,sergeevich),
+		(2,smetanina,anastasia,dmitrievna),
+		(3,zakharov,ivan,vasilievich),
+		(4,kiselev,sergey,konstantinovich),
+		(5,trofimov,grigory,andreevich),
+		(6,vlasova,christina,sergeevna),
+		(7,miterin,dmitry,sergeevich),
+		(8,andropov,vasily,abramovich),
+		(9,matyushin,egor,vitalievich),
+		(10,botilova,elizoveta,andreevna);
+2020-11-10 15:56:29.697 MSK [815] FATAL:  lock file "postmaster.pid" already exists
+2020-11-10 15:56:29.697 MSK [815] HINT:  Is another postmaster (PID 641) running in data directory "/usr/local/pgsql/data"?
+2020-11-12 11:17:52.975 MSK [3989] ERROR:  syntax error at or near ".8" at character 63
+2020-11-12 11:17:52.975 MSK [3989] STATEMENT:  INSERT INTO pcs(id,room_id,ip_addr,mac_addr) VALUES
+		(1,1,5.56.8,C8:69:CD:EE:DD:01),
+		(2,1,5.56.9,C8:69:CD:EE:DD:02),
+		(3,2,5.56.10,C8:69:CD:EE:DD:03),
+		(4,2,5.56.11,C8:69:CD:EE:DD:04),
+		(5,3,5.56.12,C8:69:CD:EE:DD:05),
+		(6,3,5.56.13,C8:69:CD:EE:DD:06),
+		(7,4,5.56.14,C8:69:CD:EE:DD:07),
+		(8,4,5.56.15,C8:69:CD:EE:DD:08),
+		(9,5,5.56.16,C8:69:CD:EE:DD:09),
+		(10,5,5.56.17,C8:69:CD:EE:DD:10),
+		(11,6,5.56.18,C8:69:CD:EE:DD:11),
+		(12,6,5.56.19,C8:69:CD:EE:DD:12),
+		(13,7,5.56.20,C8:69:CD:EE:DD:13),
+		(14,7,5.56.21,C8:69:CD:EE:DD:14),
+		(15,8,5.56.22,C8:69:CD:EE:DD:15),
+		(16,8,5.56.23,C8:69:CD:EE:DD:16),
+		(17,9,5.56.24,C8:69:CD:EE:DD:17),
+		(18,9,5.56.25,C8:69:CD:EE:DD:18),
+		(19,10,5.56.26,C8:69:CD:EE:DD:19),
+		(20,10,5.56.27,C8:69:CD:EE:DD:20),
+		(21,11,5.56.28,C8:69:CD:EE:DD:21),
+		(22,11,5.56.29,C8:69:CD:EE:DD:22),
+		(23,12,5.56.30,C8:69:CD:EE:DD:23),
+		(24,12,5.56.31,C8:69:CD:EE:DD:24),
+		(25,13,5.56.32,C8:69:CD:EE:DD:25),
+		(26,13,5.56.33,C8:69:CD:EE:DD:26),
+		(27,14,5.56.34,C8:69:CD:EE:DD:27),
+		(28,14,5.56.35,C8:69:CD:EE:DD:28),
+		(29,15,5.56.36,C8:69:CD:EE:DD:29);
+2020-11-12 11:17:52.977 MSK [3989] ERROR:  column "yaroslavlev" does not exist at character 56
+2020-11-12 11:17:52.977 MSK [3989] STATEMENT:  INSERT INTO employees(id,lname,fname,mname) VALUES
+		(1,yaroslavlev,nikita,sergeevich),
+		(2,smetanina,anastasia,dmitrievna),
+		(3,zakharov,ivan,vasilievich),
+		(4,kiselev,sergey,konstantinovich),
+		(5,trofimov,grigory,andreevich),
+		(6,vlasova,christina,sergeevna),
+		(7,miterin,dmitry,sergeevich),
+		(8,andropov,vasily,abramovich),
+		(9,matyushin,egor,vitalievich),
+		(10,botilova,elizoveta,andreevna);
+2020-11-12 11:19:57.425 MSK [4000] ERROR:  syntax error at or near ":" at character 66
+2020-11-12 11:19:57.425 MSK [4000] STATEMENT:  INSERT INTO pcs(id,room_id,ip_addr,mac_addr) VALUES
+		(1,1,5.56,C8:69:CD:EE:DD:01),
+		(2,1,5.56.9,C8:69:CD:EE:DD:02),
+		(3,2,5.56.10,C8:69:CD:EE:DD:03),
+		(4,2,5.56.11,C8:69:CD:EE:DD:04),
+		(5,3,5.56.12,C8:69:CD:EE:DD:05),
+		(6,3,5.56.13,C8:69:CD:EE:DD:06),
+		(7,4,5.56.14,C8:69:CD:EE:DD:07),
+		(8,4,5.56.15,C8:69:CD:EE:DD:08),
+		(9,5,5.56.16,C8:69:CD:EE:DD:09),
+		(10,5,5.56.17,C8:69:CD:EE:DD:10),
+		(11,6,5.56.18,C8:69:CD:EE:DD:11),
+		(12,6,5.56.19,C8:69:CD:EE:DD:12),
+		(13,7,5.56.20,C8:69:CD:EE:DD:13),
+		(14,7,5.56.21,C8:69:CD:EE:DD:14),
+		(15,8,5.56.22,C8:69:CD:EE:DD:15),
+		(16,8,5.56.23,C8:69:CD:EE:DD:16),
+		(17,9,5.56.24,C8:69:CD:EE:DD:17),
+		(18,9,5.56.25,C8:69:CD:EE:DD:18),
+		(19,10,5.56.26,C8:69:CD:EE:DD:19),
+		(20,10,5.56.27,C8:69:CD:EE:DD:20),
+		(21,11,5.56.28,C8:69:CD:EE:DD:21),
+		(22,11,5.56.29,C8:69:CD:EE:DD:22),
+		(23,12,5.56.30,C8:69:CD:EE:DD:23),
+		(24,12,5.56.31,C8:69:CD:EE:DD:24),
+		(25,13,5.56.32,C8:69:CD:EE:DD:25),
+		(26,13,5.56.33,C8:69:CD:EE:DD:26),
+		(27,14,5.56.34,C8:69:CD:EE:DD:27),
+		(28,14,5.56.35,C8:69:CD:EE:DD:28),
+		(29,15,5.56.36,C8:69:CD:EE:DD:29);
+2020-11-12 11:19:57.427 MSK [4000] ERROR:  column "yaroslavlev" does not exist at character 56
+2020-11-12 11:19:57.427 MSK [4000] STATEMENT:  INSERT INTO employees(id,lname,fname,mname) VALUES
+		(1,yaroslavlev,nikita,sergeevich),
+		(2,smetanina,anastasia,dmitrievna),
+		(3,zakharov,ivan,vasilievich),
+		(4,kiselev,sergey,konstantinovich),
+		(5,trofimov,grigory,andreevich),
+		(6,vlasova,christina,sergeevna),
+		(7,miterin,dmitry,sergeevich),
+		(8,andropov,vasily,abramovich),
+		(9,matyushin,egor,vitalievich),
+		(10,botilova,elizoveta,andreevna);
+2020-11-12 11:20:58.169 MSK [4007] ERROR:  syntax error at or near ".9" at character 94
+2020-11-12 11:20:58.169 MSK [4007] STATEMENT:  INSERT INTO pcs(id,room_id,ip_addr,mac_addr) VALUES
+		(1,1,5.56,C8_69_CD_EE_DD_01),
+		(2,1,5.56.9,C8:69:CD:EE:DD:02),
+		(3,2,5.56.10,C8:69:CD:EE:DD:03),
+		(4,2,5.56.11,C8:69:CD:EE:DD:04),
+		(5,3,5.56.12,C8:69:CD:EE:DD:05),
+		(6,3,5.56.13,C8:69:CD:EE:DD:06),
+		(7,4,5.56.14,C8:69:CD:EE:DD:07),
+		(8,4,5.56.15,C8:69:CD:EE:DD:08),
+		(9,5,5.56.16,C8:69:CD:EE:DD:09),
+		(10,5,5.56.17,C8:69:CD:EE:DD:10),
+		(11,6,5.56.18,C8:69:CD:EE:DD:11),
+		(12,6,5.56.19,C8:69:CD:EE:DD:12),
+		(13,7,5.56.20,C8:69:CD:EE:DD:13),
+		(14,7,5.56.21,C8:69:CD:EE:DD:14),
+		(15,8,5.56.22,C8:69:CD:EE:DD:15),
+		(16,8,5.56.23,C8:69:CD:EE:DD:16),
+		(17,9,5.56.24,C8:69:CD:EE:DD:17),
+		(18,9,5.56.25,C8:69:CD:EE:DD:18),
+		(19,10,5.56.26,C8:69:CD:EE:DD:19),
+		(20,10,5.56.27,C8:69:CD:EE:DD:20),
+		(21,11,5.56.28,C8:69:CD:EE:DD:21),
+		(22,11,5.56.29,C8:69:CD:EE:DD:22),
+		(23,12,5.56.30,C8:69:CD:EE:DD:23),
+		(24,12,5.56.31,C8:69:CD:EE:DD:24),
+		(25,13,5.56.32,C8:69:CD:EE:DD:25),
+		(26,13,5.56.33,C8:69:CD:EE:DD:26),
+		(27,14,5.56.34,C8:69:CD:EE:DD:27),
+		(28,14,5.56.35,C8:69:CD:EE:DD:28),
+		(29,15,5.56.36,C8:69:CD:EE:DD:29);
+2020-11-12 11:20:58.171 MSK [4007] ERROR:  column "yaroslavlev" does not exist at character 56
+2020-11-12 11:20:58.171 MSK [4007] STATEMENT:  INSERT INTO employees(id,lname,fname,mname) VALUES
+		(1,yaroslavlev,nikita,sergeevich),
+		(2,smetanina,anastasia,dmitrievna),
+		(3,zakharov,ivan,vasilievich),
+		(4,kiselev,sergey,konstantinovich),
+		(5,trofimov,grigory,andreevich),
+		(6,vlasova,christina,sergeevna),
+		(7,miterin,dmitry,sergeevich),
+		(8,andropov,vasily,abramovich),
+		(9,matyushin,egor,vitalievich),
+		(10,botilova,elizoveta,andreevna);
+2020-11-12 11:28:25.731 MSK [4019] ERROR:  column "ip_addr" of relation "pcs" does not exist at character 28
+2020-11-12 11:28:25.731 MSK [4019] STATEMENT:  INSERT INTO pcs(id,room_id,ip_addr,mac_addr) VALUES
+		(1,1,5.56,C8_69_CD_EE_DD_01),
+		(2,1,5.56,C8_69_CD_EE_DD_02),
+		(3,2,5.56,C8_69_CD_EE_DD_03),
+		(4,2,5.56,C8_69_CD_EE_DD_04),
+		(5,3,5.56,C8_69_CD_EE_DD_05),
+		(6,3,5.56,C8_69_CD_EE_DD_06),
+		(7,4,5.56,C8_69_CD_EE_DD_07),
+		(8,4,5.56,C8_69_CD_EE_DD_08),
+		(9,5,5.56,C8_69_CD_EE_DD_09),
+		(10,5,5.56,C8_69_CD_EE_DD_10),
+		(11,6,5.56,C8_69_CD_EE_DD_11),
+		(12,6,5.56,C8_69_CD_EE_DD_12),
+		(13,7,5.56,C8_69_CD_EE_DD_13),
+		(14,7,5.56,C8_69_CD_EE_DD_14),
+		(15,8,5.56,C8_69_CD_EE_DD_15),
+		(16,8,5.56,C8_69_CD_EE_DD_16),
+		(17,9,5.56,C8_69_CD_EE_DD_17),
+		(18,9,5.56,C8_69_CD_EE_DD_18),
+		(19,10,5.56,C8_69_CD_EE_DD_19),
+		(20,10,5.56,C8_69_CD_EE_DD_20),
+		(21,11,5.56,C8_69_CD_EE_DD_21),
+		(22,11,5.56,C8_69_CD_EE_DD_22),
+		(23,12,5.56,C8_69_CD_EE_DD_23),
+		(24,12,5.56,C8_69_CD_EE_DD_24),
+		(25,13,5.56,C8_69_CD_EE_DD_25),
+		(26,13,5.56,C8_69_CD_EE_DD_26),
+		(27,14,5.56,C8_69_CD_EE_DD_27),
+		(28,14,5.56,C8_69_CD_EE_DD_28),
+		(29,15,5.56,C8_69_CD_EE_DD_29);
+2020-11-12 11:28:25.734 MSK [4019] ERROR:  column "yaroslavlev" does not exist at character 56
+2020-11-12 11:28:25.734 MSK [4019] STATEMENT:  INSERT INTO employees(id,lname,fname,mname) VALUES
+		(1,yaroslavlev,nikita,sergeevich),
+		(2,smetanina,anastasia,dmitrievna),
+		(3,zakharov,ivan,vasilievich),
+		(4,kiselev,sergey,konstantinovich),
+		(5,trofimov,grigory,andreevich),
+		(6,vlasova,christina,sergeevna),
+		(7,miterin,dmitry,sergeevich),
+		(8,andropov,vasily,abramovich),
+		(9,matyushin,egor,vitalievich),
+		(10,botilova,elizoveta,andreevna);
+2020-11-12 11:32:04.503 MSK [4030] ERROR:  column "ip_addr" of relation "pcs" does not exist at character 28
+2020-11-12 11:32:04.503 MSK [4030] STATEMENT:  INSERT INTO pcs(id,room_id,ip_addr,mac_addr) VALUES
+		(1,1,5.56,C8_69_CD_EE_DD_01),
+		(2,1,5.56,C8_69_CD_EE_DD_02),
+		(3,2,5.56,C8_69_CD_EE_DD_03),
+		(4,2,5.56,C8_69_CD_EE_DD_04),
+		(5,3,5.56,C8_69_CD_EE_DD_05),
+		(6,3,5.56,C8_69_CD_EE_DD_06),
+		(7,4,5.56,C8_69_CD_EE_DD_07),
+		(8,4,5.56,C8_69_CD_EE_DD_08),
+		(9,5,5.56,C8_69_CD_EE_DD_09),
+		(10,5,5.56,C8_69_CD_EE_DD_10),
+		(11,6,5.56,C8_69_CD_EE_DD_11),
+		(12,6,5.56,C8_69_CD_EE_DD_12),
+		(13,7,5.56,C8_69_CD_EE_DD_13),
+		(14,7,5.56,C8_69_CD_EE_DD_14),
+		(15,8,5.56,C8_69_CD_EE_DD_15),
+		(16,8,5.56,C8_69_CD_EE_DD_16),
+		(17,9,5.56,C8_69_CD_EE_DD_17),
+		(18,9,5.56,C8_69_CD_EE_DD_18),
+		(19,10,5.56,C8_69_CD_EE_DD_19),
+		(20,10,5.56,C8_69_CD_EE_DD_20),
+		(21,11,5.56,C8_69_CD_EE_DD_21),
+		(22,11,5.56,C8_69_CD_EE_DD_22),
+		(23,12,5.56,C8_69_CD_EE_DD_23),
+		(24,12,5.56,C8_69_CD_EE_DD_24),
+		(25,13,5.56,C8_69_CD_EE_DD_25),
+		(26,13,5.56,C8_69_CD_EE_DD_26),
+		(27,14,5.56,C8_69_CD_EE_DD_27),
+		(28,14,5.56,C8_69_CD_EE_DD_28),
+		(29,15,5.56,C8_69_CD_EE_DD_29);
+2020-11-12 11:32:04.505 MSK [4030] ERROR:  column "yaroslavlev" does not exist at character 56
+2020-11-12 11:32:04.505 MSK [4030] STATEMENT:  INSERT INTO employees(id,lname,fname,mname) VALUES
+		(1,Yaroslavlev,nikita,sergeevich),
+		(2,smetanina,anastasia,dmitrievna),
+		(3,zakharov,ivan,vasilievich),
+		(4,kiselev,sergey,konstantinovich),
+		(5,trofimov,grigory,andreevich),
+		(6,vlasova,christina,sergeevna),
+		(7,miterin,dmitry,sergeevich),
+		(8,andropov,vasily,abramovich),
+		(9,matyushin,egor,vitalievich),
+		(10,botilova,elizoveta,andreevna);
+2020-11-12 11:38:03.976 MSK [4043] ERROR:  column "ip_addr" of relation "pcs" does not exist at character 28
+2020-11-12 11:38:03.976 MSK [4043] STATEMENT:  INSERT INTO pcs(id,room_id,ip_addr,mac_addr) VALUES
+		(1,1,5.56,C8_69_CD_EE_DD_01),
+		(2,1,5.56,C8_69_CD_EE_DD_02),
+		(3,2,5.56,C8_69_CD_EE_DD_03),
+		(4,2,5.56,C8_69_CD_EE_DD_04),
+		(5,3,5.56,C8_69_CD_EE_DD_05),
+		(6,3,5.56,C8_69_CD_EE_DD_06),
+		(7,4,5.56,C8_69_CD_EE_DD_07),
+		(8,4,5.56,C8_69_CD_EE_DD_08),
+		(9,5,5.56,C8_69_CD_EE_DD_09),
+		(10,5,5.56,C8_69_CD_EE_DD_10),
+		(11,6,5.56,C8_69_CD_EE_DD_11),
+		(12,6,5.56,C8_69_CD_EE_DD_12),
+		(13,7,5.56,C8_69_CD_EE_DD_13),
+		(14,7,5.56,C8_69_CD_EE_DD_14),
+		(15,8,5.56,C8_69_CD_EE_DD_15),
+		(16,8,5.56,C8_69_CD_EE_DD_16),
+		(17,9,5.56,C8_69_CD_EE_DD_17),
+		(18,9,5.56,C8_69_CD_EE_DD_18),
+		(19,10,5.56,C8_69_CD_EE_DD_19),
+		(20,10,5.56,C8_69_CD_EE_DD_20),
+		(21,11,5.56,C8_69_CD_EE_DD_21),
+		(22,11,5.56,C8_69_CD_EE_DD_22),
+		(23,12,5.56,C8_69_CD_EE_DD_23),
+		(24,12,5.56,C8_69_CD_EE_DD_24),
+		(25,13,5.56,C8_69_CD_EE_DD_25),
+		(26,13,5.56,C8_69_CD_EE_DD_26),
+		(27,14,5.56,C8_69_CD_EE_DD_27),
+		(28,14,5.56,C8_69_CD_EE_DD_28),
+		(29,15,5.56,C8_69_CD_EE_DD_29);
+2020-11-12 11:38:03.980 MSK [4043] ERROR:  column "yaroslavlev" does not exist at character 56
+2020-11-12 11:38:03.980 MSK [4043] STATEMENT:  INSERT INTO employees(id,lname,fname,mname) VALUES
+		(1,Yaroslavlev,nikita,sergeevich),
+		(2,smetanina,anastasia,dmitrievna),
+		(3,zakharov,ivan,vasilievich),
+		(4,kiselev,sergey,konstantinovich),
+		(5,trofimov,grigory,andreevich),
+		(6,vlasova,christina,sergeevna),
+		(7,miterin,dmitry,sergeevich),
+		(8,andropov,vasily,abramovich),
+		(9,matyushin,egor,vitalievich),
+		(10,botilova,elizoveta,andreevna);
+2020-11-12 11:39:25.266 MSK [4049] ERROR:  column "ip_addr" of relation "pcs" does not exist at character 28
+2020-11-12 11:39:25.266 MSK [4049] STATEMENT:  INSERT INTO pcs(id,room_id,ip_addr,mac_addr) VALUES
+		(1,1,5.56,C8_69_CD_EE_DD_01),
+		(2,1,5.56,C8_69_CD_EE_DD_02),
+		(3,2,5.56,C8_69_CD_EE_DD_03),
+		(4,2,5.56,C8_69_CD_EE_DD_04),
+		(5,3,5.56,C8_69_CD_EE_DD_05),
+		(6,3,5.56,C8_69_CD_EE_DD_06),
+		(7,4,5.56,C8_69_CD_EE_DD_07),
+		(8,4,5.56,C8_69_CD_EE_DD_08),
+		(9,5,5.56,C8_69_CD_EE_DD_09),
+		(10,5,5.56,C8_69_CD_EE_DD_10),
+		(11,6,5.56,C8_69_CD_EE_DD_11),
+		(12,6,5.56,C8_69_CD_EE_DD_12),
+		(13,7,5.56,C8_69_CD_EE_DD_13),
+		(14,7,5.56,C8_69_CD_EE_DD_14),
+		(15,8,5.56,C8_69_CD_EE_DD_15),
+		(16,8,5.56,C8_69_CD_EE_DD_16),
+		(17,9,5.56,C8_69_CD_EE_DD_17),
+		(18,9,5.56,C8_69_CD_EE_DD_18),
+		(19,10,5.56,C8_69_CD_EE_DD_19),
+		(20,10,5.56,C8_69_CD_EE_DD_20),
+		(21,11,5.56,C8_69_CD_EE_DD_21),
+		(22,11,5.56,C8_69_CD_EE_DD_22),
+		(23,12,5.56,C8_69_CD_EE_DD_23),
+		(24,12,5.56,C8_69_CD_EE_DD_24),
+		(25,13,5.56,C8_69_CD_EE_DD_25),
+		(26,13,5.56,C8_69_CD_EE_DD_26),
+		(27,14,5.56,C8_69_CD_EE_DD_27),
+		(28,14,5.56,C8_69_CD_EE_DD_28),
+		(29,15,5.56,C8_69_CD_EE_DD_29);
+2020-11-12 11:39:25.269 MSK [4049] ERROR:  column "yaroslavlev" does not exist at character 56
+2020-11-12 11:39:25.269 MSK [4049] STATEMENT:  INSERT INTO employees(id,lname,fname,mname) VALUES
+		(1,Yaroslavlev,nikita,sergeevich),
+		(2,smetanina,anastasia,dmitrievna),
+		(3,zakharov,ivan,vasilievich),
+		(4,kiselev,sergey,konstantinovich),
+		(5,trofimov,grigory,andreevich),
+		(6,vlasova,christina,sergeevna),
+		(7,miterin,dmitry,sergeevich),
+		(8,andropov,vasily,abramovich),
+		(9,matyushin,egor,vitalievich),
+		(10,botilova,elizoveta,andreevna);
+2020-11-12 12:00:34.336 MSK [4076] ERROR:  column "ip_addr" of relation "pcs" does not exist at character 28
+2020-11-12 12:00:34.336 MSK [4076] STATEMENT:  INSERT INTO pcs(id,room_id,ip_addr,mac_addr) VALUES
+		(1,1,5.56,'C8_69_CD_EE_DD_01'),
+		(2,1,5.56,'C8_69_CD_EE_DD_02'),
+		(3,2,5.56,'C8_69_CD_EE_DD_03'),
+		(4,2,5.56,'C8_69_CD_EE_DD_04'),
+		(5,3,5.56,'C8_69_CD_EE_DD_05'),
+		(6,3,5.56,'C8_69_CD_EE_DD_06'),
+		(7,4,5.56,'C8_69_CD_EE_DD_07'),
+		(8,4,5.56,'C8_69_CD_EE_DD_08'),
+		(9,5,5.56,'C8_69_CD_EE_DD_09'),
+		(10,5,5.56,'C8_69_CD_EE_DD_10'),
+		(11,6,5.56,'C8_69_CD_EE_DD_11'),
+		(12,6,5.56,'C8_69_CD_EE_DD_12'),
+		(13,7,5.56,'C8_69_CD_EE_DD_13'),
+		(14,7,5.56,'C8_69_CD_EE_DD_14'),
+		(15,8,5.56,'C8_69_CD_EE_DD_15'),
+		(16,8,5.56,'C8_69_CD_EE_DD_16'),
+		(17,9,5.56,'C8_69_CD_EE_DD_17'),
+		(18,9,5.56,'C8_69_CD_EE_DD_18'),
+		(19,10,5.56,'C8_69_CD_EE_DD_19'),
+		(20,10,5.56,'C8_69_CD_EE_DD_20'),
+		(21,11,5.56,'C8_69_CD_EE_DD_21'),
+		(22,11,5.56,'C8_69_CD_EE_DD_22'),
+		(23,12,5.56,'C8_69_CD_EE_DD_23'),
+		(24,12,5.56,'C8_69_CD_EE_DD_24'),
+		(25,13,5.56,'C8_69_CD_EE_DD_25'),
+		(26,13,5.56,'C8_69_CD_EE_DD_26'),
+		(27,14,5.56,'C8_69_CD_EE_DD_27'),
+		(28,14,5.56,'C8_69_CD_EE_DD_28'),
+		(29,15,5.56,'C8_69_CD_EE_DD_29');
+2020-11-12 12:10:21.897 MSK [4089] ERROR:  column "ip_addr" of relation "pcs" does not exist at character 28
+2020-11-12 12:10:21.897 MSK [4089] STATEMENT:  INSERT INTO pcs(id,room_id,ip_addr,mac_addr) VALUES
+		(1,1,5.56,'C8_69_CD_EE_DD_01'),
+		(2,1,5.56,'C8_69_CD_EE_DD_02'),
+		(3,2,5.56,'C8_69_CD_EE_DD_03'),
+		(4,2,5.56,'C8_69_CD_EE_DD_04'),
+		(5,3,5.56,'C8_69_CD_EE_DD_05'),
+		(6,3,5.56,'C8_69_CD_EE_DD_06'),
+		(7,4,5.56,'C8_69_CD_EE_DD_07'),
+		(8,4,5.56,'C8_69_CD_EE_DD_08'),
+		(9,5,5.56,'C8_69_CD_EE_DD_09'),
+		(10,5,5.56,'C8_69_CD_EE_DD_10'),
+		(11,6,5.56,'C8_69_CD_EE_DD_11'),
+		(12,6,5.56,'C8_69_CD_EE_DD_12'),
+		(13,7,5.56,'C8_69_CD_EE_DD_13'),
+		(14,7,5.56,'C8_69_CD_EE_DD_14'),
+		(15,8,5.56,'C8_69_CD_EE_DD_15'),
+		(16,8,5.56,'C8_69_CD_EE_DD_16'),
+		(17,9,5.56,'C8_69_CD_EE_DD_17'),
+		(18,9,5.56,'C8_69_CD_EE_DD_18'),
+		(19,10,5.56,'C8_69_CD_EE_DD_19'),
+		(20,10,5.56,'C8_69_CD_EE_DD_20'),
+		(21,11,5.56,'C8_69_CD_EE_DD_21'),
+		(22,11,5.56,'C8_69_CD_EE_DD_22'),
+		(23,12,5.56,'C8_69_CD_EE_DD_23'),
+		(24,12,5.56,'C8_69_CD_EE_DD_24'),
+		(25,13,5.56,'C8_69_CD_EE_DD_25'),
+		(26,13,5.56,'C8_69_CD_EE_DD_26'),
+		(27,14,5.56,'C8_69_CD_EE_DD_27'),
+		(28,14,5.56,'C8_69_CD_EE_DD_28'),
+		(29,15,5.56,'C8_69_CD_EE_DD_29');
+2020-11-12 12:12:07.127 MSK [4094] ERROR:  column "ip_addr" of relation "pcs" does not exist at character 28
+2020-11-12 12:12:07.127 MSK [4094] STATEMENT:  INSERT INTO pcs(id,room_id,ip_addr,mac_addr) VALUES
+		(1,1,5.56,'C8_69_CD_EE_DD_01'),
+		(2,1,5.56,'C8_69_CD_EE_DD_02'),
+		(3,2,5.56,'C8_69_CD_EE_DD_03'),
+		(4,2,5.56,'C8_69_CD_EE_DD_04'),
+		(5,3,5.56,'C8_69_CD_EE_DD_05'),
+		(6,3,5.56,'C8_69_CD_EE_DD_06'),
+		(7,4,5.56,'C8_69_CD_EE_DD_07'),
+		(8,4,5.56,'C8_69_CD_EE_DD_08'),
+		(9,5,5.56,'C8_69_CD_EE_DD_09'),
+		(10,5,5.56,'C8_69_CD_EE_DD_10'),
+		(11,6,5.56,'C8_69_CD_EE_DD_11'),
+		(12,6,5.56,'C8_69_CD_EE_DD_12'),
+		(13,7,5.56,'C8_69_CD_EE_DD_13'),
+		(14,7,5.56,'C8_69_CD_EE_DD_14'),
+		(15,8,5.56,'C8_69_CD_EE_DD_15'),
+		(16,8,5.56,'C8_69_CD_EE_DD_16'),
+		(17,9,5.56,'C8_69_CD_EE_DD_17'),
+		(18,9,5.56,'C8_69_CD_EE_DD_18'),
+		(19,10,5.56,'C8_69_CD_EE_DD_19'),
+		(20,10,5.56,'C8_69_CD_EE_DD_20'),
+		(21,11,5.56,'C8_69_CD_EE_DD_21'),
+		(22,11,5.56,'C8_69_CD_EE_DD_22'),
+		(23,12,5.56,'C8_69_CD_EE_DD_23'),
+		(24,12,5.56,'C8_69_CD_EE_DD_24'),
+		(25,13,5.56,'C8_69_CD_EE_DD_25'),
+		(26,13,5.56,'C8_69_CD_EE_DD_26'),
+		(27,14,5.56,'C8_69_CD_EE_DD_27'),
+		(28,14,5.56,'C8_69_CD_EE_DD_28'),
+		(29,15,5.56,'C8_69_CD_EE_DD_29');
+2020-11-12 13:15:52.679 MSK [4212] ERROR:  insert or update on table "installs" violates foreign key constraint "inst"
+2020-11-12 13:15:52.679 MSK [4212] DETAIL:  Key (pc_id)=(1) is not present in table "pcs".
+2020-11-12 13:15:52.679 MSK [4212] STATEMENT:  INSERT INTO installs (pc_id,soft_id) VALUES
+		(1,4),
+		(1,1),
+		(2,4),
+		(2,2),
+		(3,4),
+		(3,0),
+		(4,5),
+		(4,3),
+		(5,4),
+		(5,4),
+		(6,0),
+		(6,4),
+		(7,0),
+		(7,2),
+		(8,1),
+		(8,0),
+		(9,3),
+		(9,0),
+		(10,3),
+		(10,5),
+		(11,0),
+		(11,1),
+		(12,2),
+		(12,2),
+		(13,1),
+		(13,5),
+		(14,5),
+		(14,1),
+		(15,1),
+		(15,5),
+		(16,4),
+		(16,4),
+		(17,3),
+		(17,1),
+		(18,2),
+		(18,1),
+		(19,5),
+		(19,0),
+		(20,2),
+		(20,0),
+		(21,3),
+		(21,2),
+		(22,4),
+		(22,4),
+		(23,1),
+		(23,0),
+		(24,2),
+		(24,0),
+		(25,1),
+		(25,1),
+		(26,2),
+		(26,4),
+		(27,3),
+		(27,3),
+		(28,3),
+		(28,1),
+		(29,4),
+		(29,5),
+		(30,1),
+		(30,0);
+2020-11-12 13:15:52.684 MSK [4212] ERROR:  insert or update on table "pcs" violates foreign key constraint "peka2"
+2020-11-12 13:15:52.684 MSK [4212] DETAIL:  Key (room_id)=(1) is not present in table "rooms".
+2020-11-12 13:15:52.684 MSK [4212] STATEMENT:  INSERT INTO pcs(id,room_id,ip_addr,mac_addr) VALUES
+		(1,1,5.56,'C8_69_CD_EE_DD_01'),
+		(2,1,5.56,'C8_69_CD_EE_DD_02'),
+		(3,2,5.56,'C8_69_CD_EE_DD_03'),
+		(4,2,5.56,'C8_69_CD_EE_DD_04'),
+		(5,3,5.56,'C8_69_CD_EE_DD_05'),
+		(6,3,5.56,'C8_69_CD_EE_DD_06'),
+		(7,4,5.56,'C8_69_CD_EE_DD_07'),
+		(8,4,5.56,'C8_69_CD_EE_DD_08'),
+		(9,5,5.56,'C8_69_CD_EE_DD_09'),
+		(10,5,5.56,'C8_69_CD_EE_DD_10'),
+		(11,6,5.56,'C8_69_CD_EE_DD_11'),
+		(12,6,5.56,'C8_69_CD_EE_DD_12'),
+		(13,7,5.56,'C8_69_CD_EE_DD_13'),
+		(14,7,5.56,'C8_69_CD_EE_DD_14'),
+		(15,8,5.56,'C8_69_CD_EE_DD_15'),
+		(16,8,5.56,'C8_69_CD_EE_DD_16'),
+		(17,9,5.56,'C8_69_CD_EE_DD_17'),
+		(18,9,5.56,'C8_69_CD_EE_DD_18'),
+		(19,10,5.56,'C8_69_CD_EE_DD_19'),
+		(20,10,5.56,'C8_69_CD_EE_DD_20'),
+		(21,11,5.56,'C8_69_CD_EE_DD_21'),
+		(22,11,5.56,'C8_69_CD_EE_DD_22'),
+		(23,12,5.56,'C8_69_CD_EE_DD_23'),
+		(24,12,5.56,'C8_69_CD_EE_DD_24'),
+		(25,13,5.56,'C8_69_CD_EE_DD_25'),
+		(26,13,5.56,'C8_69_CD_EE_DD_26'),
+		(27,14,5.56,'C8_69_CD_EE_DD_27'),
+		(28,14,5.56,'C8_69_CD_EE_DD_28'),
+		(29,15,5.56,'C8_69_CD_EE_DD_29');
+2020-11-12 13:15:52.686 MSK [4212] ERROR:  insert or update on table "rooms" violates foreign key constraint "room2"
+2020-11-12 13:15:52.686 MSK [4212] DETAIL:  Key (emp_id)=(1) is not present in table "employees".
+2020-11-12 13:15:52.686 MSK [4212] STATEMENT:  INSERT INTO rooms(id,num,emp_id) VALUES
+		(1,101,1),
+		(2,102,3),
+		(3,103,4),
+		(4,104,6),
+		(5,105,6),
+		(6,201,9),
+		(7,202,7),
+		(8,203,1),
+		(9,204,5),
+		(10,205,6),
+		(11,301,9),
+		(12,302,7),
+		(13,303,10),
+		(14,304,8),
+		(15,305,5);
+2020-11-12 13:16:09.488 MSK [4219] ERROR:  insert or update on table "installs" violates foreign key constraint "inst"
+2020-11-12 13:16:09.488 MSK [4219] DETAIL:  Key (pc_id)=(30) is not present in table "pcs".
+2020-11-12 13:16:09.488 MSK [4219] STATEMENT:  ALTER TABLE installs ADD CONSTRAINT inst FOREIGN KEY (pc_id) REFERENCES pcs (id);
+2020-11-12 13:16:09.491 MSK [4219] ERROR:  insert or update on table "installs" violates foreign key constraint "inst2"
+2020-11-12 13:16:09.491 MSK [4219] DETAIL:  Key (soft_id)=(0) is not present in table "soft".
+2020-11-12 13:16:09.491 MSK [4219] STATEMENT:  ALTER TABLE installs ADD CONSTRAINT inst2 FOREIGN KEY (soft_id) REFERENCES soft (id);
+2020-11-12 15:24:40.098 MSK [4511] FATAL:  lock file "postmaster.pid" already exists
+2020-11-12 15:24:40.098 MSK [4511] HINT:  Is another postmaster (PID 641) running in data directory "/usr/local/pgsql/data"?
+2020-11-12 15:25:32.567 MSK [4513] ERROR:  syntax error at or near ":" at character 20
+2020-11-12 15:25:32.567 MSK [4513] STATEMENT:  select * from lab02:
+	;
+2020-11-12 15:25:37.978 MSK [4513] ERROR:  relation "lab02" does not exist at character 15
+2020-11-12 15:25:37.978 MSK [4513] STATEMENT:  select * from lab02;
+2020-11-12 15:25:55.384 MSK [4513] ERROR:  relation "lab02" does not exist at character 15
+2020-11-12 15:25:55.384 MSK [4513] STATEMENT:  select * from Lab02;
+2020-11-12 15:26:10.824 MSK [4513] ERROR:  syntax error at or near "-" at character 1
+2020-11-12 15:26:10.824 MSK [4513] STATEMENT:  -l
+	;
+2020-11-12 15:27:24.403 MSK [4523] ERROR:  relation "lab02" does not exist at character 15
+2020-11-12 15:27:24.403 MSK [4523] STATEMENT:  select * from lab02;
